@@ -1,0 +1,241 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ContentMasterPage.master.cs" Inherits="ContentMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <style>
+        .accord {
+            width: 1140px;
+            margin-left: 100px;
+            height: 40px;
+            background-color: red;
+        }
+
+        .uper1 {
+            width: 100%;
+            height: 40px;
+            background-color: slateblue;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding-top: 10px;
+            transition: 0.4s;
+        }
+
+         .box {
+            width: 1140px;
+           height:60px;
+            margin-left: 100px;
+            box-sizing: border-box;
+            box-shadow: 2px;
+        }
+
+         #top{
+            position:fixed;
+            width:50px;
+            height:50px;
+            top:600px;
+            right:0;
+            background-image:url('top.png');
+            
+        }
+        
+          .tbl_link{
+             
+         }
+
+       .auto-style4 {
+           width: 700px;
+           border-bottom-color:black;
+           border-style:solid;
+           border-width:thin;
+       }
+
+       .auto-style5 {
+           border-bottom: thin solid black;
+           column-width: 80px;
+           width: 171px;
+           border-left-style: solid;
+           border-left-width: thin;
+           border-right-style: solid;
+           border-right-width: thin;
+           border-top-style: solid;
+           border-top-width: thin;
+       }
+       .auto-style6 {
+           border-bottom: thin solid black;
+           column-width: 50px;
+           width: 178px;
+           border-left-style: solid;
+           border-left-width: thin;
+           border-right-style: solid;
+           border-right-width: thin;
+           border-top-style: solid;
+           border-top-width: thin;
+       }
+       .auto-style7 {
+           width: 178px;
+       }
+
+    </style>
+      <link rel="stylesheet" href="popregister.css" />
+    <link rel="stylesheet" href="same.css" />
+    <link rel="stylesheet" href="contentmaster.css" />
+    <link rel="javascript" type="text/javascript" href="JavaScript.js" />
+   
+</head>
+<body>
+    
+     <a href="#cont"><img src="top.png" id="top"/></a>
+    <div class="head" id="cont">
+        <img class="logo" src="logo copy.png" />
+       
+
+    </div>
+     <form id="form1" runat="server">
+    <div class="box">
+        <div class="container" >
+            <ul>
+                <li><a class="style0" href="Home.aspx">Home</a></li>
+                <li><a class="style0"  id="active"  href="Jobs.aspx">Jobs</a></li>
+                <li><a class="style0"  id="active2" href="result.aspx">Results</a></li>
+                <li><a class="style0"  id="active3" href="admit.aspx">Admit Cards</a></li>
+                <li><a class="style0"  id="active4" href="#">Government Courses</a></li>
+                <li><a class="style0"  id="active5" href="#foot">Contact Us</a></li>     
+            </ul>
+        </div>
+        </div>
+        <div class="job">
+            <div class="info">
+                <table>
+                    <tr>
+                        <td>
+                            Post Name &emsp;&emsp;&nbsp;&nbsp;:  
+                        </td>
+                        <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Last Date &emsp;&emsp;&emsp;:  
+                        </td>
+                        <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Brief Description :  
+                        </td>
+                        <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+            </div>   <br />
+        <table class="job_description" cellspacing="0">
+            <tr>
+                <td colspan="3" class="auto-style4">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="All_table" colspan="2">
+                    &nbsp;Applying Date :
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server"></asp:ContentPlaceHolder>
+                </td>
+                <td class="All_table" colspan="2">
+                    &nbsp;Last Date :
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="All_table1" colspan="2">
+                    Application Fee
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder7" runat="server"></asp:ContentPlaceHolder>   
+                </td>
+                <td class="All_table" colspan="2">
+                    Seat Available
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder8" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        
+                <tr>
+                    <td class="auto-style6">
+                        <b>Post Name</b>
+                    </td>
+                    <td class="auto-style5">
+                        <b>&emsp;&emsp;Age Limit</b>
+                    </td>
+                    <td class="eligibility" colspan="2">
+                        <b>&emsp;&emsp;&emsp;&emsp;&emsp;Eligibility</b>
+                    </td>
+                    
+                </tr>
+            <tr>
+                <td class="All_table">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder9" runat="server"></asp:ContentPlaceHolder>
+                </td>
+                <td class="All_table">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder10" runat="server"></asp:ContentPlaceHolder>
+                </td>
+                <td class="All_table">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder11" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="All_table" colspan="3">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Exam Center
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder12" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="All_table" colspan="3">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Important Links
+                 </td>
+            </tr>
+            <tr>
+                <td class="All_table" colspan="2">
+                     &nbsp;Official Website
+                </td>
+                <td class="All_table" colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder13" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="All_table" colspan="2">
+                     &nbsp;Download Brochure
+                </td>
+                <td class="All_table" colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder14" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="All_table" colspan="2">
+                     &nbsp;Apply
+                </td>
+                <td class="All_table" colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder15" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <br />    
+       </div> 
+         <div class="disclaimer">
+             Disclaimer : The Examination Results/ Marks published in this website is only for the immediate Information to the examinees an does not to be a constitute
+             to be a legal Document while all effort have been made to make the information available on this website as Authentic as possible. We are not responsible for
+              any Inadvertent Error that may have crept in the Examination results / Marks being published in this Website had for any loss to anybody or anything 
+             caused by any Shortcoming. Defect or Inaccuracy of the Information on this website 
+         </div>
+
+    </form>
+</body>
+</html>
