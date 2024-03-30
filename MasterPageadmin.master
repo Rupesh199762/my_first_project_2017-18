@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageadmin.master.cs" Inherits="MasterPageadmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        
+        body{
+            background-image:url("backimage.jpg");
+        }
+
+        .nav{
+             width:100%;
+             text-align:center;
+             height:50px;
+        }
+        .navigation{
+            color:white;
+            font-weight:bold;
+            font-family:Arial;
+            text-align:center;
+            font-size:24px;
+            float:left;
+            width:320px;
+            height:40px;
+            margin-left:10px;
+            padding-top:10px;
+            border:1px solid white;
+        }
+         
+        .navigation:hover{
+            background-color:lightyellow;
+            color:black;
+        }
+       
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <div class="nav">
+            <a class="navigation" href="Index/Home.aspx">Home</a>
+            <a class="navigation" href="Index/job.aspx">Jobs</a>
+            <a class="navigation" href="Index/Result.aspx">Results</a>
+            <a class="navigation" href="Index/AdmitCard.aspx">Admit Card</a>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
